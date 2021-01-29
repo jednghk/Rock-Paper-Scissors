@@ -50,12 +50,12 @@ function checkFinalWinner() {
         }
 }
 
-function playRock() { //executed upon button press, playerChoice varies by button
+function playRound(playerChoice) {
     if (playerScore === 5 || computerScore === 5) {
         return
     }
     
-    let result = winChecker('r', ComputerSelection());
+    let result = winChecker(playerChoice, ComputerSelection());
     if (result === 'win') {
         playerScore += 1
     } else if (result === 'lose') {
@@ -65,46 +65,17 @@ function playRock() { //executed upon button press, playerChoice varies by butto
     checkFinalWinner()
 }
 
-function playPaper() { //executed upon button press, playerChoice varies by button
-    if (playerScore === 5 || computerScore === 5) {
-        return
-    }
-    
-    let result = winChecker('p', ComputerSelection());
-    if (result === 'win') {
-        playerScore += 1
-    } else if (result === 'lose') {
-        computerScore += 1
-    }
-    updateScore()
-    checkFinalWinner()
-}
-
-function playScissors() { //executed upon button press, playerChoice varies by button
-    if (playerScore === 5 || computerScore === 5) {
-        return
-    }
-    
-    let result = winChecker('s', ComputerSelection());
-    if (result === 'win') {
-        playerScore += 1
-    } else if (result === 'lose') {
-        computerScore += 1
-    }
-    updateScore()
-    checkFinalWinner()
-}
 var playerScore = 0
 var computerScore = 0
 
 const rock = document.querySelector('#rock')
-rock.addEventListener('click', playRock)
+rock.addEventListener('click', () => playRound('r'))
 
 const paper = document.querySelector('#paper')
-paper.addEventListener('click', playPaper)
+paper.addEventListener('click', () => playRound('p'))
 
 const scissors = document.querySelector('#scissors')
-scissors.addEventListener('click', playScissors)
+scissors.addEventListener('click', () => playRound('s'))
 
 //VERSION 1
 /*
