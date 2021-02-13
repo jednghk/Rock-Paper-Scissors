@@ -1,4 +1,4 @@
-#Rock Paper Scissors Minigame
+# Rock Paper Scissors Minigame
 
 [Live Preview](https://jod-nhk.github.io/Rock-Paper-Scissors/rps.html)
 
