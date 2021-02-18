@@ -1,6 +1,6 @@
 # Rock Paper Scissors Minigame
 
-[Live Preview](https://jod-nhk.github.io/Rock-Paper-Scissors/rps.html)
+[Live Preview](https://jednghk.github.io/Rock-Paper-Scissors/rps.html)
 
 Hello! This project was a part of an exercise by The Odin Project.
 
